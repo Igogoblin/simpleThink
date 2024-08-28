@@ -1,0 +1,244 @@
+.pets {
+  width: 100%;
+  height: 877px;
+  background-color: var(--main-color-light-l);
+  padding: 80px 0 0 0;
+}
+.pets-wrapper {
+  max-width: 1200px;
+  height: 697px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.pets-title {
+  width: 400px;
+  height: 90px;
+  text-align: center;
+}
+.pets-karusel {
+  max-width: 1200px;
+  width: 100%;
+  height: 435px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  /* border: 1px solid gray; */
+}
+.karusel-area {
+  max-width: 1065px;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+
+  position: relative;
+  user-select: none;
+  touch-action: pan-y;
+  pointer-events: none;
+  border: 1px solid orange;
+}
+.karusel-track {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
+}
+.karusel-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 19px 25px 19px;
+  transition: background-color 0.3s ease;
+}
+.karusel-button:hover {
+  background-color: var(--main-color-hover);
+  border: none;
+}
+.pets-card {
+  width: 270px;
+  height: 435px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border-radius: 9px;
+  margin: 0 38px;
+  background-color: #fafafa;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.pets-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.pets-card:hover .card-button {
+  background-color: var(--main-color-hover);
+  border: none;
+}
+.pets-card img {
+  border-radius: 9px 9px 0 0;
+  padding-top: 1px;
+}
+.disappear {
+  display: none;
+}
+.pets-card span {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22.72px;
+  letter-spacing: 0.06em;
+  color: var(--text-color-dark-l);
+  margin: 30px 0;
+  padding: 0 0 0 1px;
+  transition: transform 0.3s ease-in-out;
+}
+.pets-card:hover span {
+  transform: scale(1.05);
+}
+.card-button {
+  width: 187px;
+  height: 52px;
+  border: 2px solid var(--main-color);
+  border-radius: 100px;
+  padding: 13px 40px 10px 40px;
+  font-family: Georgia;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.056em;
+  background-color: #fafafa;
+  color: var(--text-color-dark-3xl);
+}
+.pets-button {
+  width: 261px;
+  height: 52px;
+  margin-top: 60px;
+  background: var(--main-color);
+  border-radius: 100px;
+  padding: 16px 0 14px 0;
+  font-family: Georgia;
+  font-size: 17px;
+  line-height: 22.1px;
+  letter-spacing: 0.06em;
+  color: var(--text-color-dark-3xl);
+  transition: background-color 0.3s ease;
+}
+.pets-button:hover {
+  background-color: var(--main-color-hover);
+  border: none;
+}
+.invert {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 1200px) {
+  .pets-karusel {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .pets-card {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .des {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pets-karusel {
+    max-width: 708px;
+    /* width: 100%; */
+    margin-left: 17px;
+    gap: 10px;
+  }
+  .second-des {
+    /* margin-left: 24px; */
+  }
+  .karusel-area {
+    max-width: 595px;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+  }
+  .pets-button {
+    margin-left: 17px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .second-des {
+    display: none;
+  }
+  .karusel-area {
+    max-width: 270px;
+    width: 100%;
+    gap: 0px;
+    justify-content: center;
+  }
+  .pets-button {
+    margin: 40px 0 0 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .pets {
+    height: 791px;
+    /* padding: 23px 0 0 0; */
+    padding: 0;
+  }
+  .pets .wrapper {
+    height: 100%;
+  }
+  .pets-wrapper {
+    height: 100%;
+    justify-content: start;
+    /* height: 707px; */
+  }
+  .pets-title {
+    width: 300px;
+    height: 64px;
+    margin: 41px 0 42px 0;
+  }
+  .pets-title h2 {
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+  .pets-karusel {
+    width: 270px;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .disappear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .appear {
+    display: none;
+  }
+  .karusel-button__area {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 42px;
+  }
+
+  .karusel-button.invert {
+    padding: 22px 19px 19px 22px;
+  }
+  .pets-button {
+    margin-top: 114px;
+  }
+}
