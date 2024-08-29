@@ -1,3 +1,34 @@
+html {
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  --main-color: #f1cdb3;
+  --main-color-hover: #fddcc4;
+  --main-color-light-l: #f6f6f6;
+  --text-color: #ffffff;
+  --text-color-hover: #f1cdb3;
+  --text-color-dark: #cdcdcd;
+  --text-color-dark-l: #545454;
+  --text-color-dark-3xl: #292929;
+  --text-color-dark-xl: #4c4c4c;
+  --text-color-dark-m: #b2b2b2;
+  --text-color-dark-s: rgb(205, 205, 205);
+  --text-color-light-s: rgb(250, 250, 250);
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  /* overflow-y: scroll; */
+}
 .pets {
   width: 100%;
   height: 877px;
@@ -45,10 +76,12 @@
 }
 .karusel-track {
   width: 100%;
+  /* transform: translateX(calc(-100% / 3)); */
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid green;
+  transition: transform 0.5s ease-in-out;
 }
 .karusel-button {
   width: 52px;
@@ -142,6 +175,15 @@
 }
 .invert {
   transform: rotate(180deg);
+}
+/* slider --------------------------------------------------------- */
+.karusel-block {
+  /* width: calc(100% / 3); */
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 1200px) {
   .pets-karusel {
